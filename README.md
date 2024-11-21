@@ -21,7 +21,7 @@ Este projeto foi desenvolvido durante o intensivão Java Spring ministrado por N
 
 ### Pré-requisitos
 
-- Java 11 ou superior
+- Java 17 ou superior
 - Docker e Docker Compose
 
 ### Passos para Executar
