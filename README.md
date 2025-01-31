@@ -52,13 +52,13 @@ lists/{id}/replacement: Permite ao usuário organizar a lista com base em sua op
 
 ## Importar Coleção de JSON no Postman
 
-1.Abra o Postman.
+Abra o Postman.
 
-2.Clique em Import no canto superior esquerdo.
+Clique em Import no canto superior esquerdo.
 
-3.Selecione a opção Import.
+Selecione a opção Import.
 
-4. Cole o arquivo chamado DSList.postman_collection.json fornecido no projeto.
+Cole o arquivo chamado DSList.postman_collection.json fornecido no projeto.
 
 ## Visualize o H2 Console
 
