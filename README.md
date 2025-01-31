@@ -1,48 +1,91 @@
-# DSList
+# Projeto DSList 🎮
 
-Este projeto foi desenvolvido durante o intensivão Java Spring ministrado por Nélio Alves (Dev Superior). O objetivo do projeto é criar uma aplicação para gerenciar uma lista de jogos.
+Este projeto é uma API para pesquisa de jogos com capacidade de classificação individual. A aplicação permite que os usuários encontrem informações sobre diferentes títulos e classifiquem os jogos com base em sua opinião.
 
-## Tecnologias Utilizadas
+## Tecnologias Utilizadas 💻
 
-- Java
-- Spring Boot
-- JPA / Hibernate
-- PostgreSQL
-- Docker
+- **Java**
+- **Spring Boot**
+- **JPA / Hibernate**
+- **PostgreSQL**
+- **Postman**
+- **H2 Database**
 
-## Funcionalidades
+## Como Executar 🚀
 
-- Cadastro de jogos
-- Listagem de jogos
-- Atualização de informações dos jogos
-- Remoção de jogos
+Para executar o projeto em sua máquina, siga os passos abaixo:
 
-## Como Executar o Projeto
-
-### Pré-requisitos
-
-- Java 17 ou superior
-- Docker e Docker Compose
-
-### Passos para Executar
-
-1. Clone o repositório:
+1. **Clone o repositório**: Abra o terminal ou o prompt de comando e execute o comando abaixo para clonar o repositório localmente:
    ```bash
    git clone https://github.com/vitorbnr/dslist.git
-   cd dslist
 
-2. Execute o Docker Compose para iniciar os serviços:
+Navegue até o diretório do projeto: Após o clone ser concluído, entre no diretório do projeto com o comando:
 
-docker-compose up -d
+   ```bash
+cd dslist
+```
+   
+   ```bash
+./mvnw clean install
+```
+- **Execute o projeto no terminal**: Após a compilação, execute o comando:
 
-3. Execute a aplicação:
-
+```bash
 ./mvnw spring-boot:run
-A aplicação estará disponível em http://localhost:8080.
+```
+- **Execute o projeto na IDE**: Abra sua IDE (por exemplo, IntelliJ IDEA), importe o projeto e execute a classe principal DslistApplication.java.
 
-### Estrutura do Projeto
-src/main/java: Código fonte da aplicação
+## Instruções de Uso 📋
+Rotas GET:
 
-src/main/resources: Arquivos de configuração
+/games: Busca a lista de jogos.
 
-docker-compose.yml: Configuração dos serviços Docker
+/games/{id}: Busca um jogo por meio do ID.
+
+/lists: Busca a categoria das listas de jogos.
+
+/lists/{id}/games: Busca a lista categorizada pelo gênero (ID) dos jogos.
+
+Rotas POST:
+
+lists/{id}/replacement: Permite ao usuário organizar a lista com base em sua opinião.
+
+## Importar Coleção de JSON no Postman
+
+1.Abra o Postman.
+
+2.Clique em Import no canto superior esquerdo.
+
+3.Selecione a opção Import.
+
+4. Cole o arquivo chamado DSList.postman_collection.json fornecido no projeto.
+
+## Visualize o H2 Console
+
+Para visualizar o H2 Console e inspecionar o banco de dados em memória, siga os passos abaixo:
+
+Certifique-se de que a aplicação está rodando.
+
+Acesse o H2 Console no navegador através do endereço:
+
+http://localhost:8080/h2-console
+Use as seguintes credenciais para login:
+
+JDBC URL: jdbc:h2:mem:testdb
+
+User Name: sa
+
+Password: (deixe em branco)
+
+## Aprendizados 📚
+Este projeto foi fundamental para fortalecer os seguintes conceitos:
+
+Desenvolvimento de APIs RESTful com Spring Boot.
+
+Integração com banco de dados PostgreSQL utilizando JPA/Hibernate.
+
+Configuração e uso de variáveis de ambiente.
+
+Manipulação de dados e criação de endpoints para operações CRUD.
+
+
